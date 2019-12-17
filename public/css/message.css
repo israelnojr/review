@@ -1,0 +1,14 @@
+.flash{
+    position: fixed;
+    top: 43px;
+    right: 5px;
+    z-index: 1;
+}
+
+.position{
+    position: relative;
+    top: -18px !important;
+    right: -9px !important;
+    color: inherit;
+    font-size: 25px !important;
+}
