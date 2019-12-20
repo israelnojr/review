@@ -43,5 +43,4 @@ Route::post('/services/order/', 'CustomersOrderController@customOrder')->name('c
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('verified')->group( function(){
     Route::resource('users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-    Route::get('/home', 'HomeController@index')->name('home');
 });
