@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class CustomersOrderController extends Controller
 {
+
+    // public function welcome()
+    // {
+    //     return view('welcome');
+    // }
+
     public function index()
     {
         $services = Pricing::where('status', true)->get();

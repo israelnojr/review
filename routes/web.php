@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::middleware('can:dashboardPermission')->group( function(){
+Route::middleware('verified')->group( function(){
 Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -41,7 +41,7 @@ Route::get('/services/order/{Pricing}', 'CustomersOrderController@show')->name('
 Route::get('/services/order/', 'CustomersOrderController@contact')->name('contact');
 Route::post('/services/order/', 'CustomersOrderController@customOrder')->name('customorder');
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:dashboardPermission')->group( function(){
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('verified')->group( function(){
     Route::resource('users', 'UsersController', ['except' => ['show', 'create', 'store']]);
     Route::get('/home', 'HomeController@index')->name('home');
 });

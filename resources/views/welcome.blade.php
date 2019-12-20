@@ -13,7 +13,7 @@
       <div class="intro-info">
         <h2>We provide<br><span>solutions</span><br>for your business!</h2>
         <div>
-          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          <a href="{{route('pricing')}}" class="btn-get-started scrollto">Get Started</a>
           <a href="#services" class="btn-services scrollto">Our Services</a>
         </div>
       </div>
@@ -41,9 +41,6 @@
             <p>
 			              <br> <br> <br> <br> <br>We take strategic & tactical approach, that is crafted on a case by<br> case basis. We do this in order to deliver the highest quality outcome<br> to meet customer requests and expectations. <br><br>  Are you watching the online reputation you spent years developing go up in flames in a split second? Completely boost your reputatione with our reviews!
             </p>
-
-            
-
           </div>
 
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
@@ -115,11 +112,7 @@ Our team will guide you through the strategy planning and execution stages.  We 
               <p class="description">Our team of experts work with you or your marketing team to create and promote positive content to clarify the world about your brand.</p>
             </div>
           </div>
-
-          
-
         </div>
-
       </div>
     </section><!-- #services -->
 

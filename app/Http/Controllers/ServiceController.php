@@ -16,7 +16,7 @@ class ServiceController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('can:dashboardPermission');
     }
     
     public function contactList()
@@ -47,10 +47,10 @@ class ServiceController extends Controller
     }
 
     
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     public function Orders()
     {
@@ -173,15 +173,14 @@ class ServiceController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $service = Pricing::findOrFail($id);
+        
+        $this->validate($request,['service_name' => 'required','price' => 'required',]);
+        
+        $service->update($request->all());
+        return redirect()->route('home')->with('success', ' Service Updated Succesfffully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     // public function destroy($id)
     // {
     //     //

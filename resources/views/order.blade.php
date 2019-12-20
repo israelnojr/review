@@ -55,6 +55,7 @@
                   </div>
                    
                     <div class="form-group col-lg-12">
+                    <label for="qty"><span class="badge badge-danger">Quantity</span></label>
                       <input type="number" name="qty" class="form-control" id="qty" value="1" min="1" value="{{ old('number') }}" />
                       <div class="validation"></div>
                     </div>
@@ -87,9 +88,7 @@
               </form>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- #contact -->
 
